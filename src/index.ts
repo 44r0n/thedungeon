@@ -4,6 +4,7 @@ import Buefy from 'buefy';
 import router from './router';
 import 'buefy/dist/buefy.css';
 import App from './App.vue';
+import i18n from './translations/i18n';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -28,5 +29,6 @@ Vue.use(Buefy, {
 Vue.component('app', App);
 
 const app = new Vue({
+  i18n,
   router
 }).$mount('#app');

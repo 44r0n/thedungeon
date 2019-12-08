@@ -4,18 +4,18 @@
 			<div class="columns">
 				<div class='column is-5'>
 					<section>
-						<b-field horizontal label='Roll type' :type='diceInputFieldType' :message='diceFieldMessage'>
+						<b-field horizontal :label="rollTypeText" :type='diceInputFieldType' :message='diceFieldMessage'>
 							<b-input name='subject' placeholder='1d6, 2d10, 1d9+2, 1o3d10' v-model='diceInput' expanded></b-input>
 						</b-field>
 						<b-field horizontal>
 							<div class='column'>
-								<b-button type='is-primary' @click='roll'><vue-fontawesome :icon="['fas','dice-d20']"/>&nbsp;Roll</b-button>
+								<b-button type='is-primary' @click='roll'><vue-fontawesome :icon="['fas','dice-d20']"/>&nbsp; {{ this.$t('rollButton') }}</b-button>
 							</div>
 							<div class='column'>
-								<b-button type='is-primary' outlined @click='addToFavorites'><vue-fontawesome :icon="['fas', 'plus']"/>&nbsp;Add to favorite</b-button>
+								<b-button type='is-primary' outlined @click='addToFavorites'><vue-fontawesome :icon="['fas', 'plus']"/>&nbsp; {{ this.$t('addToFavoritesButton') }}</b-button>
 							</div>
 							<div class='column'>
-								<b-button type='is-danger' @click='clearFavorites'><vue-fontawesome :icon="['fas', 'trash']"/>&nbsp;Clear favorites</b-button>
+								<b-button type='is-danger' @click='clearFavorites'><vue-fontawesome :icon="['fas', 'trash']"/>&nbsp; {{ this.$t('clearFavoritesButton') }} </b-button>
 							</div>
 						</b-field>
 					</section>
@@ -60,6 +60,10 @@ export default class DiceRoll extends Vue {
 
 	get diceFieldType(): inputField {
 		return this.diceInputFieldType;
+	}
+
+	get rollTypeText() {
+		return this.$t('rollTypeLabel');
 	}
 
 	get diceFieldMessage(): string {
