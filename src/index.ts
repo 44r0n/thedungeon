@@ -28,7 +28,7 @@ Vue.use(Buefy, {
 });
 Vue.component('app', App);
 
-const app = new Vue({
+new Vue({
   i18n,
   router
 }).$mount('#app');

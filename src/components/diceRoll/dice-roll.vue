@@ -42,7 +42,7 @@
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator';
 import inputField from '../../utils/inputField';
-import { isValidDiceRoll, roll, createDiceRoll } from '../../utils/diceRoll';
+import { isValidDiceRoll, roll } from '../../utils/diceRoll';
 import StoredRolls from './stored-rolls.vue';
 import * as Store from '../../store/dice-roll.store';
 

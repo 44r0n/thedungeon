@@ -10,7 +10,6 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import NavBar from './components/NavBar.vue'
-import VueRouter from 'vue-router';
 
 Vue.component('nav-bar', NavBar);
 

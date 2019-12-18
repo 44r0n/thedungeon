@@ -11,4 +11,4 @@ Vue.component('dice-roll', DiceRoll);
 @Component
 export default class MainView extends Vue { }
 
-</script><
+</script>
