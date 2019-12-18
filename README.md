@@ -4,7 +4,8 @@ The dungeon es una aplicación de ayuda al master de partidas de rol. Especialme
 
 ## Estado del proyecto
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2F44r0n%2Fthedungeon%2Fbadge%3Fref%3Dmaster&style=flat-square)](https://actions-badge.atrox.dev/44r0n/thedungeon/goto?ref=master)
+![](https://github.com/44r0n/thedungeon/workflows/Node%20CI/badge.svg)
+[![DeepScan grade](https://deepscan.io/api/teams/6472/projects/8505/branches/102396/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=6472&pid=8505&bid=102396)
 
 ## Instalación
 
