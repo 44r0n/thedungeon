@@ -98,6 +98,11 @@ describe('Given a roll type', () => {
 		expect(valid).to.be.false;
 	});
 
+	it('3d10+ is not valid', () => {
+		const valid = isValidDiceRoll('3d10+');
+		expect(valid).to.be.false;
+	});
+
 	it('Applies Math operation like "1d6 + 3"', () => {
 		const valid = isValidDiceRoll('1d6+ 3');
 		expect(valid).to.be.true;
