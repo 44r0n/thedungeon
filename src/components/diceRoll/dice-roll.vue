@@ -78,8 +78,9 @@ export default class DiceRoll extends Vue {
 		if (isValidDiceRoll(this.diceInput)) {
 			this.setValidDiceRoll();
 			this.diceRollResult = roll(this.diceInput);
-		} else
+		} else {
 			this.setInvalidDiceRoll();
+		}
 	}
 
 	addToFavorites(): void {
