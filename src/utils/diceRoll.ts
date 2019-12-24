@@ -45,7 +45,13 @@ export function roll(diceRoll: diceRoll | string): string {
 	if(typeof(diceRoll) === 'string') {
 		const rolledString = diceRoll.replace(reg, (str) => roll(createDiceRoll(str)).toString());
 
-		return rolledString.split(',').map(cs => eval(cs)).join(',');
+		return rolledString.split(',').map(cs => {
+			try {
+				return eval(cs);
+			} catch {
+				return cs;
+			}
+		}).join(',');
 	}
 
 	let result = 0;

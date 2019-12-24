@@ -77,16 +77,10 @@ export default class DiceRoll extends Vue {
 	roll():void  {
 		if (isValidDiceRoll(this.diceInput)) {
 			this.setValidDiceRoll();
-			// Hack. Even if the regular expression validates the dice roll it
-			// can fail during the eval phase. In that case the roll is not valid.
-			try {
-				this.diceRollResult = roll(this.diceInput);
-			}
-			catch {
-				this.setInvalidDiceRoll();
-			}
-		} else
+			this.diceRollResult = roll(this.diceInput);
+		} else {
 			this.setInvalidDiceRoll();
+		}
 	}
 
 	addToFavorites(): void {
